@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  
+    
+}
+
+body {
+    background: #120d08;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+.contact{
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.contact h1 {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.contact p {
+    color: #cfcfcf;
+    font-size: 18px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+form {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.08);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 20px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    background: rgba(150, 145, 155, 0.08);
+    color: white;
+    font-size: 17px;
+    outline: none;
+    transition: .3s;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #bdbdbd;
+}
+
+form input:focus,
+form textarea:focus {
+    border: 2px solid #d4af37;
+}
+
+form textarea {
+    resize: none;
+    height: 170px;
+}
+
+form button {
+    width: 100%;
+    padding: 16px;
+    background: #d4af37;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+form button:hover {
+    background: #f1c84b;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, .4);
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    * {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+
+    .contact {
+        min-height: auto;
+        padding: 50px 20px;
+    }
+
+    .contact h1 {
+        font-size: 34px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    .contact p {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: 30px;
+        padding: 0 10px;
+    }
+
+    form {
+        width: 100%;
+        max-width: 100%;
+        padding: 25px 20px;
+        border-radius: 18px;
+    }
+
+    form input,
+    form textarea {
+        padding: 14px;
+        font-size: 15px;
+        margin-bottom: 18px;
+    }
+
+    form textarea {
+        height: 130px;
+    }
+
+    form button {
+        padding: 15px;
+        font-size: 17px;
+    }
+}

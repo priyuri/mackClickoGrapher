@@ -1,0 +1,206 @@
+/* * {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.photographer {
+
+    width: 100%;
+    padding: 100px 10%;
+    background: #18130d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 80px;
+    color: white;
+
+
+}
+
+.photographer-image {
+    flex: 1;
+}
+
+.photographer-image img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 20px;
+     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3); 
+    box-shadow: 10px 10px 30px rgba(208, 186, 61, 0.3);
+}
+
+
+
+.photographer-content {
+    flex: 1;
+    padding-right: 170px;
+}
+
+.photographer-content h4 {
+    color: gold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.photographer-content h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.photographer-content h3 {
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.photographer-content p {
+    color: #bbb;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.photographer-details {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.detail {
+    flex: 1;
+    background: #1b1b1b;
+    padding: 25px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.detail h2 {
+    color: gold;
+    font-size: 35px;
+}
+
+.detail p {
+    margin-top: 10px;
+}
+
+.photographer button {
+    padding: 15px 40px;
+    border: none;
+    border-radius: 30px;
+    background: gold;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.photographer button:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* ========================= */
+/* Mobile Responsive */
+/* ========================= */
+
+@media (max-width:768px) {
+
+    .photographer {
+
+        flex-direction: column;
+        padding: 90px 20px 50px;
+        gap: 40px;
+        text-align: center;
+
+    }
+
+    .photographer-image {
+
+        width: 100%;
+
+    }
+
+    .photographer-image img {
+
+        width: 100%;
+        height: 380px;
+        object-fit: cover;
+        object-position: top;
+
+    }
+
+    .photographer-content {
+
+        width: 100%;
+        padding-right: 0;
+
+    }
+
+    .photographer-content h4 {
+
+        font-size: 18px;
+
+    }
+
+    .photographer-content h2 {
+
+        font-size: 36px;
+        line-height: 44px;
+
+    }
+
+    .photographer-content h3 {
+
+        font-size: 18px;
+        line-height: 28px;
+
+    }
+
+    .photographer-content p {
+
+        font-size: 16px;
+        line-height: 28px;
+
+    }
+
+    .photographer-details {
+
+        flex-direction: column;
+        gap: 15px;
+
+    }
+
+    .detail {
+
+        width: 100%;
+
+    }
+
+    .detail h2 {
+
+        font-size: 30px;
+
+    }
+
+    .photographer button {
+
+        width: 100%;
+        padding: 15px;
+        font-size: 17px;
+
+    }
+
+}

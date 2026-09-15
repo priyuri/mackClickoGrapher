@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking page</title>
+    <link rel="stylesheet" href="booking.css">
+</head>
+
+<body>
+    <section class="booking" id="contact">
+
+        <div class="booking-content">
+
+            <h4>Book Your Shoot</h4>
+
+            <h2>Let's Capture Your Beautiful Moments</h2>
+
+            <p>
+                Whether it's a wedding, pre-wedding, birthday, baby shoot, or any
+                special occasion, we're here to turn your precious memories into
+                timeless photographs.
+            </p>
+
+            <div class="booking-info">
+
+                <div class="info-box">
+                    <h3>📍 Address</h3>
+                    <p>Nagpur, Maharashtra</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>📞 Phone</h3>
+                    <p>+91 75593 75372</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>📧 Email</h3>
+                    <p>kunalsukhdeve@gmail.com</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>⏰ Working Time</h3>
+                    <p>Mon - Sun | Day | Night</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="booking-form">
+
+            <form id="bookingForm">
+
+                <input type="text" name="name" placeholder="Full Name" required>
+
+                <input type="email" name="email" placeholder="Email Address" required>
+
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+
+                <select name="service" required>
+
+                    <option value=" ">Select Service</option>
+                    <option value="Wedding Photography">Wedding Photography</option>
+                    <option value="Pre Wedding">Pre Wedding</option>
+                    <option value="Birthday Shoot">Birthday Shoot</option>
+                    <option value="Baby Shoot">Baby Shoot</option>
+                    <option value="Event Photography">Event Photography</option>
+
+                </select>
+
+                <input type="date" name="shoot_date" required>
+
+                <textarea name="message" rows="5" placeholder="Tell us about your event..."></textarea>
+
+                <button type="submit">Book Now</button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+    <script>
+
+        const bookingForm = document.getElementById("bookingForm");
+
+        bookingForm.addEventListener("submit", async function (event) {
+
+            event.preventDefault();
+
+            const formData = new FormData(bookingForm);
+
+            const bookingData = Object.fromEntries(formData.entries());
+
+            try {
+
+                const response = await fetch(
+                    "http://localhost:5000/api/bookings",
+                    {
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify(bookingData)
+                    }
+                );
+
+                const result = await response.json();
+
+                if (result.success) {
+
+                    alert(result.message);
+
+                    bookingForm.reset();
+
+                } else {
+
+                    alert(result.message);
+
+                }
+
+            } catch (error) {
+
+                console.error(error);
+
+                alert("Something went wrong. Please try again.");
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>
