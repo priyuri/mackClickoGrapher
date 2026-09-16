@@ -271,7 +271,7 @@ footer .copyright {
 /* ================= MOBILE ================= */
 @media (max-width:768px) {
 
-    /* Navbar */
+
     .navbar {
         padding: 15px 20px;
         height: 70px;
@@ -292,7 +292,7 @@ footer .copyright {
         cursor: pointer;
     }
 
-    .menu-toggle i{
+    .menu-toggle i {
         font-weight: 700;
     }
 
@@ -321,10 +321,6 @@ footer .copyright {
         display: none;
     }
 
-    /* Hero */
-
-
-
     .hero {
         background-position: 65% center;
         background-image:
@@ -341,11 +337,6 @@ footer .copyright {
         padding-top: 20px;
     }
 
-
-    /* .hero-content {
-        margin-top: 0;
-        padding: 0 20px;
-    } */
 
     .hero-content h1 {
         font-size: 32px;
