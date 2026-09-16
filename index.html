@@ -7,6 +7,10 @@
     <title>Photography Website</title>
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="gallary.css">
+    <link rel="stylesheet" href="contact.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
@@ -15,25 +19,6 @@
 <body>
 
     <header>
-
-        <!-- <nav class="navbar">
-
-            <div class="logo">
-                <i class="fa-solid fa-camera-retro"></i>
-                Pixel Studio
-            </div>
-
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Our Services</a></li>
-                <li><a href="gallary.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-
-            <a href="booking.html" class="btn">Book a Shoot</a>
-
-        </nav> -->
 
         <nav class="navbar">
 
@@ -89,14 +74,226 @@
 
         </section>
 
+        <section class="about" id="about">
+        
+        
+            <div class="about-image">
+        
+                <img src="images/1.jpeg" class="img1">
+        
+                <div class="small-images">
+                    <img src="images/3.jpeg" class="img2">
+                    <img src="images/4.jpeg" class="img3">
+                </div>
+        
+            </div>
+        
+            <div class="about-content">
+                <h4>About Us</h4>
+        
+                <h2>Capturing Beautiful Moments Since 2019</h2>
+        
+                <p>
+                    We are passionate photographers dedicated to capturing emotions,
+                    smiles and unforgettable memories. From weddings to birthdays,
+                    we make every moment timeless.
+                </p>
+        
+                <div class="about-boxes">
+        
+                    <div class="box">
+                        <h2>10+</h2>
+                        <p>Years Experience</p>
+                    </div>
+        
+                    <div class="box">
+                        <h2>500+</h2>
+                        <p>Happy Clients</p>
+                    </div>
+        
+                    <div class="box">
+                        <h2>1000+</h2>
+                        <p>Projects Completed</p>
+                    </div>
+        
+                </div>
+        
+                <button onclick="location.href='photographer.html'">Meet the photographer</button>
+        
+            </div>
+        
+        </section>
+
+
+        <section class="services" id="services">
+
+            <h1>Our Services</h1>
+
+            <div class="service-container">
+
+                <div class="service-card">
+                    <h2>Wedding Photography</h2>
+                    <p>Capture every wedding moment beautifully.</p>
+                </div>
+
+                <div class="service-card">
+                    <h2>Pre Wedding Shoot</h2>
+                    <p>Creative outdoor and cinematic shoots.</p>
+                </div>
+
+                <div class="service-card">
+                    <h2>Birthday Shoot</h2>
+                    <p>Memories that last forever.</p>
+                </div>
+
+                <div class="service-card">
+                    <h2>Baby Shoot</h2>
+                    <p>Cute and professional baby photography.</p>
+                </div>
+
+                <div class="service-card">
+                    <h2>Event Photography</h2>
+                    <p>Corporate and personal events coverage.</p>
+                </div>
+
+                <div class="service-card">
+                    <h2>Photo Editing</h2>
+                    <p>Professional HD editing and albums.</p>
+                </div>
+
+
+            </div>
+            <div class="hero-line"></div>
+
+        </section>
+
+        <section class="gallery" id="gallery">
+        
+            <h1>Every Picture Tells a Story</h1>
+        
+            <p class="gallery-subtitle">
+                Explore our collection of weddings, pre-weddings, birthdays, baby shoots,
+                and unforgettable moments captured with creativity and passion.
+            </p>
+        
+            <div class="gallery-container">
+        
+                <img src="images/10.jpeg" id="img1">
+                <img src="images/18.jpeg" id="img2">
+                <img src="images/12.jpeg" id="img3">
+                <img src="images/15.jpeg" id="img4">
+                <img src="images/4.jpeg" id="img5">
+                <img src="images/20.jpeg" id="img6">
+                <img src="images/19.jpeg" id="img7">
+                <img src="images/17.jpeg" id="img8">
+                <img src="images/16.jpeg" id="img9">
+                <img src="images/7.jpeg" id="img10">
+                <img src="images/8.jpeg" id="img11">
+                <img src="images/1.jpeg" id="img12">
+                <img src="images/14.jpeg" id="img13">
+                <img src="images/3.jpeg" id="img14">
+                <img src="images/9.jpeg" id="img15">
+                <img src="images/13.jpeg" id="img16">
+        
+        
+            </div>
+        
+        </section>
+        
+        <!-- Image Popup / Lightbox -->
+        <div class="lightbox" id="lightbox"> <span class="close" id="close">&times;</span> <img id="lightbox-img" src=""
+                alt="Selected Image"> </div>
+        <script src="gallary.js"></script>
+
+        <section class="contact" id="contact">
+        
+            <h1>Get In Touch</h1>
+        
+            <p>
+                Let's turn your precious moments into timeless memories.
+                Fill out the form below and we'll get in touch with you soon.
+            </p>
+        
+            <form id="contactForm">
+        
+                <input type="text" id="name" placeholder="Your Name" required>
+        
+                <input type="email" id="email" placeholder="Your Email" required>
+        
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+        
+                <textarea id="message" placeholder="Message" required></textarea>
+        
+                <button type="submit">Send Message</button>
+        
+            </form>
+        
+        </section>
+        
+        <script>
+
+            const contactForm = document.getElementById("contactForm");
+
+            contactForm.addEventListener("submit", async function (e) {
+
+                e.preventDefault();
+
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const phone = document.getElementById("phone").value;
+                const message = document.getElementById("message").value;
+
+                try {
+
+                    const response = await fetch("http://localhost:5000/api/contact", {
+
+                        method: "POST",
+
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            phone: phone,
+                            message: message
+                        })
+
+                    });
+
+                    const data = await response.json();
+
+                    alert(data.message);
+
+                    if (response.ok) {
+                        contactForm.reset();
+                    }
+
+                } catch (error) {
+
+                    console.log(error);
+
+                    alert("Server se connection nahi ho raha");
+
+                }
+
+            });
+
+        </script>
+
     </header>
+
+    
+
     <footer>
         <h2>makClickoGrapher</h2>
 
         <p>Capturing Moments That Last Forever.</p>
 
         <div class="social">
-            <a href="https://instagram.com/mackclickographer91" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://instagram.com/mackclickographer91" target="_blank"><i
+                    class="fa-brands fa-instagram"></i></a>
             <a href="#"><i class="fa-brands fa-facebook"></i></a>
             <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
             <a href="#"><i class="fa-brands fa-youtube"></i></a>
